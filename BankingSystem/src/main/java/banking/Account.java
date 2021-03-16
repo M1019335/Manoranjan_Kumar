@@ -47,10 +47,17 @@ public abstract class Account {
 
 	public void creditAccount(double amount) {
 		// complete the function
+		balance += amount;
 	}
 
 	public boolean debitAccount(double amount) {
 		// complete the function
+		if(balance<amount){
+            	return false;
+        	} else{
+           	 balance -= amount;
+            	return true;
+        }
         return true;
 	}
 }
